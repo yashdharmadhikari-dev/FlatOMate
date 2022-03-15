@@ -13,3 +13,7 @@
 
 - 26/02/2022 <br>
   Structural Design finalized for FlatOMate.
+- 11/03/2022<br>
+  Figma designing
+-15/03/22 <br>
+  login page implementation (sid)
