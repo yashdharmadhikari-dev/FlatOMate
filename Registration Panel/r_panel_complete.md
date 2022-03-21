@@ -12,3 +12,8 @@
 2. Verfication will automated in upcoming versions. 
 3. Image below 50kb will only be allowed for submission.
 4. There will be a hyperlink below terms and condition. Which will specify the T&C of the app.
+
+# Codes
+  Access the design codes from: 
+  
+  ```https://www.figma.com/file/KKiyWmqIy248nf9tZb7hJJ/FlatOMate?node-id=10%3A91```
