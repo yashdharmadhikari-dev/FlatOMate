@@ -19,5 +19,7 @@
   login page implementation(sid)
 - 19/03/22<br>
   Designed Registration Panel using Figma
-- 20/03/2022
+- 20/03/2022<br>
   User Authentication with Firebase
+- 21/03/2022<br>
+  Completion of Registration Panel
