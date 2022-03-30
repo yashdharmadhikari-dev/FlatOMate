@@ -17,5 +17,5 @@
    ```Android>app>src>main>res>drawable;```
    
 4. Change the code at ```launch_background.xml```
-5. Make the change ```<item android:drawable="android:color/black"``
+5. Make the change ```<item android:drawable="android:color/black>"```
 6. Make the change ```android:src = "@drawable/flatomate.png"```
