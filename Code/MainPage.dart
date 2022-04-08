@@ -3,6 +3,7 @@ import 'package:flatomate/Authentication_service.dart';
 import 'package:flatomate/DevelopedBy.dart';
 import 'package:flatomate/First.dart';
 import 'package:flatomate/add_connections.dart';
+import 'package:flatomate/display_req.dart';
 import 'package:flatomate/getData.dart';
 import 'package:flatomate/user_details.dart';
 
@@ -112,8 +113,29 @@ MainPage({required this.z});
 
             }, child: Text("show connections")),
 
-
             ElevatedButton(onPressed: () async {
+              DocumentReference y =FirebaseFirestore.instance
+                  .collection('users').doc(z);
+              //DocumentReference y =FirebaseFirestore.instance
+              //.collection('users').doc("Siddhesh");
+              String ID = y.id;
+              Display_Requests x = Display_Requests(ID:ID);
+              List<dynamic> g = await x.d();
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) =>  DisReq(x:g))
+              );
+
+
+            }, child: Text("show my requests"),
+                style: ElevatedButton.styleFrom(
+                    primary: Colors.amber,
+                    elevation: 50.0,
+                    onPrimary: Colors.black
+                )
+            ),
+
+
+            /*ElevatedButton(onPressed: () async {
               DocumentSnapshot ds = await FirebaseFirestore.instance
                   .collection('users').doc(z).get();
 
@@ -128,7 +150,7 @@ MainPage({required this.z});
                 primary: Colors.amber,
                 elevation: 50.0,
                 onPrimary: Colors.black
-            )),
+            )),*/
 
 
             ElevatedButton(onPressed: () async {

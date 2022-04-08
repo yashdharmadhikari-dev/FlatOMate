@@ -6,6 +6,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flatomate/PopUp.dart';
+import 'package:flatomate/add_requests.dart';
 import 'package:flatomate/individual_data.dart';
 import 'package:flatomate/Reg.dart';
 import 'package:flatomate/user_details.dart';
@@ -25,8 +26,9 @@ class User_data  {
   final int age;
   final int budget;
   final String mobile;
+  final String email;
 
-  User_data({required this.fname,required this.mname,required this.lname,required this.city,required this.age,required this.mobile,required this.budget});
+  User_data({required this.fname,required this.mname,required this.lname,required this.city,required this.age,required this.mobile,required this.budget,required this.email});
 
   static User_data fromJson(Map<String,dynamic> json)=>User_data(
 
@@ -36,7 +38,8 @@ class User_data  {
     city:json['city'],
     age:json['age'],
     mobile:json['mobile'],
-    budget:json['budget']
+    budget:json['budget'],
+    email:json['email']
 
   );
 
@@ -116,6 +119,10 @@ display_users({required this.x});
             onPressed: () {
               add_conn z = add_conn(d:x);
               z.updateUser(x.id, user.fname, user.city, user.mobile);
+              DocumentReference y = FirebaseFirestore.instance
+                  .collection('users').doc(user.email);
+              add_req g = add_req(d:y,Fname:x.id);
+              g.updateUser(y.id, x.id);
             },
             child: Text("Connect")
         )
