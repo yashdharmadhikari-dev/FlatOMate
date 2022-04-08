@@ -23,3 +23,5 @@
   User Authentication with Firebase
 - 21/03/2022<br>
   Completion of Registration Panel
+- 08/04/2022<br>
+  Completion of Project
